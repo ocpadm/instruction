@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee" xmlns:ejb="http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+        version="3.1">
+        <display-name>MemberRegistrationQueueReceiver</display-name>
+        <enterprise-beans>
+                <message-driven>
+                        <ejb-name>MemberRegistrationQueueReceiver</ejb-name>
+                        <ejb-class>com.nocom.inst.jms.MemberRegistrationQueueReceiver</ejb-class>
+                        <messaging-type>javax.jms.MessageListener</messaging-type>
+                        <!-- externalized MQ definitions -->
+                        <activation-config>
+                               <activation-config-property>
+                                        <activation-config-property-name>maxConnections</activation-config-property-name>
+                                        <activation-config-property-value>1</activation-config-property-value>
+                                </activation-config-property>               
+                                <activation-config-property>
+                                        <activation-config-property-name>hostName</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.host}</activation-config-property-value>
+                                </activation-config-property>
+                                <activation-config-property>
+                                        <activation-config-property-name>port</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.port}</activation-config-property-value>
+                                </activation-config-property>
+                                <activation-config-property>
+                                        <activation-config-property-name>channel</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.channel}</activation-config-property-value>
+                                </activation-config-property>
+                                <activation-config-property>
+                                        <activation-config-property-name>destination</activation-config-property-name>
+                                        <activation-config-property-value>${JBOSS.FR.BCOM.TEST.MDB}</activation-config-property-value>
+                                </activation-config-property>   
+                               <activation-config-property>
+                                        <activation-config-property-name>username</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.user}</activation-config-property-value>
+                                </activation-config-property>                                                                                            
+                                <activation-config-property>
+                                        <activation-config-property-name>sslCipherSuite</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.sslCipherSuite}</activation-config-property-value>
+                                </activation-config-property>
+                                <activation-config-property>
+                                        <activation-config-property-name>useJNDI</activation-config-property-name>
+                                        <activation-config-property-value>false</activation-config-property-value>
+                                </activation-config-property>                                
+                                <activation-config-property>
+                                        <activation-config-property-name>queueManager</activation-config-property-name>
+                                        <activation-config-property-value>${wmq.queueManager}</activation-config-property-value>
+                                </activation-config-property>                                                                                                
+                        </activation-config>
+                </message-driven>
+        </enterprise-beans>
+</ejb-jar>

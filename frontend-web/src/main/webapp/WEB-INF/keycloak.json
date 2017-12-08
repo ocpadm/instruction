@@ -1,0 +1,10 @@
+{
+  "realm": "nocom",
+  "auth-server-url": "https://rhsso:8443/auth",
+  "ssl-required": "none",
+  "resource": "frontend",
+  "credentials": {
+    "secret": "b9740664-b087-44c5-8fad-7413203c1f6f"
+  },
+  "use-resource-role-mappings": true
+}

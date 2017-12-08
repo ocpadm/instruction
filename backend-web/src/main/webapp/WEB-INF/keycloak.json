@@ -1,0 +1,8 @@
+{
+  "realm": "nocom",
+  "bearer-only": true,
+  "auth-server-url": "https://rhsso:8443/auth",
+  "ssl-required": "none",
+  "resource": "backend",
+  "use-resource-role-mappings": true
+}

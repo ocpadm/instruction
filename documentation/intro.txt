@@ -1,0 +1,46 @@
+Yannick asked me to say a few words about docker, specifically about the nice things it will bring us
+
+I was given a 15 mins timeframe to do this talk, so I dont have space for interruptions and questions, sorry about that
+
+
+
+INTRO
+
+1. OS NOT packaged which makes it leightweight
+2. CONTROLLED AND ISOLATED - process controlled in sense of CPU and MEM usage and living in isolated namespace 
+
+
+PACKAGING
+
+so what does this give us
+
+Docker redefines how we package and ship our software to our runtime environments
+
+
+AUTOMATION
+
+We are not only responsible for deployments we also support development teams with SDLC tooling CI/CD all about automation
+
+Docker alone not enough to do the job -> PIPELINE IS FILLING IN THE MISSING PART TO REACH FULL AUTOMATION
+
+GROOVY LARGE COMMUNITY PARTICIPATION (ATLASSIEN JIRA) THROUGH SHARED LIBRARIES
+
+GROOVY BECAUSE OF OO NA
+
+
+DEVELOPMENT PROCESS
+
+all about visibility of CODE and FUNCTIONALITY
+
+PROJECT backed up by only one test environment
+
+review visibility on BRANCH LEVEL impossible till now (CROSS FUNCTIONAL TEAM)
+
+DOCKER ISOLATION AND LEIGHTWEIGHTNESS ENABLES TO US TO PROVIDE EVERY BRANCH A FULLY INTEGRATED TEST ENVIRONMENT
+
+
+FUTURE
+
+DEPLOYMENTS DONE THROUGH JIRA TICKETS
+DEPLOYMENT TICKET TRIGGERS WORKFLOW TO RUN ON STATE CHANGE.
+

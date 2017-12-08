@@ -1,0 +1,1 @@
+arquillian test classes should go here
